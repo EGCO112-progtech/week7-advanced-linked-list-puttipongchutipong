@@ -104,7 +104,7 @@ int deletes( LLPtr *sPtr, int value )
       if ( currentPtr != NULL ) {
          tempPtr = currentPtr;
          previousPtr->nextPtr = currentPtr->nextPtr;
-         if (previousPtr != NULL) currentPtr->nextPtr->pPtr = previousPtr;
+         if (previousPtr != NULL) currentPtr->pPtr = previousPtr;
          free( tempPtr );
          return value;
       } // end if
@@ -145,7 +145,7 @@ void printList( LLPtr currentPtr )
 {
    // if list is empty
    if ( isEmpty( currentPtr ) ) {
-      puts( "List is empty.\n" );
+      puts( "List is empty." );
    } // end if
    else {
       //puts( "The list is:\n" );
@@ -165,7 +165,7 @@ void printList_r( LLPtr currentPtr)
 {
    // if list is empty
    if ( isEmpty( currentPtr ) ) {
-      puts( "List is empty.\n" );
+      //puts( "List is empty.\n" );
    }
    else {
       //puts( "The list is:\n" );
