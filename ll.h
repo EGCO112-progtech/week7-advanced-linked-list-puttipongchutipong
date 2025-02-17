@@ -128,7 +128,6 @@ void delete_all( LLPtr *sPtr)
       int value = tempPtr->id;
       currentPtr = currentPtr->nextPtr;
       previousPtr->nextPtr = currentPtr;
-      if (previousPtr != NULL) currentPtr->nextPtr->pPtr = previousPtr;
       free( tempPtr );
       printf("delete %d\n", value);
    } // end if
